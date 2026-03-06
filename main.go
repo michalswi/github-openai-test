@@ -16,7 +16,8 @@ func home(w http.ResponseWriter, r *http.Request) {
 	log.Println("User-Agent:", r.UserAgent())
 	w.Header().Set("Content-Type", "application/text")
 	w.WriteHeader(http.StatusOK)
-	response := "ok"
+	// response := "ok"
+	response := http.StatusOK
 	_, err := w.Write([]byte(response))
 	if err != nil {
 		log.Println("Error writing response:", err)
