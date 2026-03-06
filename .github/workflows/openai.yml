@@ -16,7 +16,7 @@ jobs:
     - name: run github-openai
       env:
         API_KEY: ${{ secrets.API_KEY }}
-        GITHUB_PAT: ${{ secrets.REPO_GITHUB_PAT }}
+        GITHUB_PAT: ${{ secrets.GH_PAT }}
         REPO_OWNER: ${{ github.repository_owner }}
         REPO_NAME: ${{ github.repository }}
       run: |
